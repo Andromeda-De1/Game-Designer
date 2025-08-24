@@ -10,6 +10,13 @@
     <header>
         <a href="#" class="logo">Arcane Pixels</a>
 
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
         <nav>
             <a href="/index.html" class="active">Home</a>
             <a href="/about.html">About</a>
@@ -20,7 +27,7 @@
     </header>
     <section class="home">
         <div class="home-img">
-            <img src="home.jpg" alt="">
+            <img src="home.jpg" alt="Arcane Pixels">
         </div>
         <div class="home-content">
             <h1>Hi, Kami Dari <span>Arcane Pixels</span></h1>
@@ -36,6 +43,13 @@
         </div>
     </section>
 
+    <script>
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('menu-toggle').checked = false;
+            });
+        });
+    </script>
     <script src="https://kit.fontawesome.com/adb0dafce3.js" crossorigin="anonymous"></script>
 </body>
 </html>
